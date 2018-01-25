@@ -38,20 +38,24 @@ export class ChatService {
   ) { }
 
   setUsername(username) {
-    this.chatHandle = username;
-    this.userList = [
-      {
-        'username': this.chatHandle,
-        'status': 'Available'
-      }, {
-        'username': 'Rick C-137',
-        'status': 'Away'
-      }, {
-        'username': 'Morty C-137',
-        'status': 'Away'
-      }
-    ];
-    this.router.navigate(['chatroom'])
+    if (typeof username === 'string') {
+      this.chatHandle = username;
+      this.userList = [
+        {
+          'username': this.chatHandle,
+          'status': 'Available'
+        }, {
+          'username': 'Rick C-137',
+          'status': 'Away'
+        }, {
+          'username': 'Morty C-137',
+          'status': 'Away'
+        }
+      ];
+      this.router.navigate(['chatroom']);
+    } else {
+      alert('Enter a username, or click \'Go Anonymous\'');
+    }
   }
 }
 
