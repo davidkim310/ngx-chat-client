@@ -1,0 +1,38 @@
+.formContainer {
+    display: flex;
+    width: 100%;
+}
+.messageInput{
+    flex: 10;
+    font-size: 1.3em;
+    color: #000;
+    padding-left: 80px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.messageButton{
+    flex: 1;
+    padding: 10px;
+    padding: 8px 24px;
+    font-size: 1.3em;
+    background-color: #a9a9a9;
+    color: white;
+    min-width: 50px;
+    border-radius: 5px;
+}
+input::-webkit-input-placeholder {
+    color: #a9a9a9 !important;
+    }
+     
+    input:-moz-placeholder { /* Firefox 18- */
+    color: a9a9a9 !important;  
+    }
+     
+    input::-moz-placeholder {  /* Firefox 19+ */
+    color: a9a9a9 !important;  
+    }
+     
+    input:-ms-input-placeholder {  
+    color: a9a9a9 !important;  
+    }
