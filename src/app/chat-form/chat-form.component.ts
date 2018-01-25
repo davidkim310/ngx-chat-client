@@ -21,7 +21,7 @@ export class ChatFormComponent implements OnInit {
   sendMessage() {
     if (this.comment !== '') {
       this.message = {
-        username: 'anonymous-user',
+        username: this.chat.chatHandle,
         time: new Date(),
         text: this.comment
       };

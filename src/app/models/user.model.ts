@@ -1,4 +1,3 @@
-// export class User {
-//     username?: string;
-//     status?: string;
-// }
+export class User {
+    username?: string;
+}

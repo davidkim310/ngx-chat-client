@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ChatMessage } from '../models/chat-message.model';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class ChatService {
@@ -17,9 +18,10 @@ export class ChatService {
     time: '2018/1/24 23:2:38',
     username: 'Morty C-137'
   }];
+  chatHandle = 'anonymous-user1';
   userList = [
     {
-      'username': 'anonymous-user',
+      'username': this.chatHandle,
       'status': 'Available'
     }, {
       'username': 'Rick C-137',
@@ -30,6 +32,26 @@ export class ChatService {
     }
   ];
 
-  constructor() { }
 
+  constructor(
+    public router: Router
+  ) { }
+
+  setUsername(username) {
+    this.chatHandle = username;
+    this.userList = [
+      {
+        'username': this.chatHandle,
+        'status': 'Available'
+      }, {
+        'username': 'Rick C-137',
+        'status': 'Away'
+      }, {
+        'username': 'Morty C-137',
+        'status': 'Away'
+      }
+    ];
+    this.router.navigate(['chatroom'])
+  }
 }
+

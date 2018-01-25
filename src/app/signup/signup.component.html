@@ -1,3 +1,15 @@
-<p>
-  signup works!
-</p>
+<div class="container">
+  <div class="signUpCard">
+    <form>
+      <h2 class="heading">Join the chat</h2>
+      <label class="label">Username</label>
+      <input name="displayName" placeholder="Enter a username" class="formInput" maxlength="12" name='username' [(ngModel)]='handle'required/>
+      <button type="submit" (click)="chat.setUsername(handle)"  class="btn">
+        Sign Up
+      </button>
+      <button type="submit" (click)="chat.setUsername('anonymous-user')" class="btn">
+        Go Anonymous
+      </button>
+    </form>
+  </div>
+</div>

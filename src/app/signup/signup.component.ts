@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatService } from '../services/chat.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private chat: ChatService,
+    private router: Router
+  ) { }
+
+  private handle: string;
+
 
   ngOnInit() {
   }
